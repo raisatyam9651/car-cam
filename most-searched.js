@@ -21,42 +21,42 @@
       label: 'Hatchback',
       viewAllLabel: 'View All Hatchback Cars',
       cars: [
-        { name: 'Maruti Swift',    price: '₹6.49 - 9.64 Lakh' },
-        { name: 'Hyundai i20',     price: '₹7.04 - 11.21 Lakh' },
-        { name: 'Tata Altroz',     price: '₹6.59 - 10.96 Lakh' },
-        { name: 'Maruti Baleno',   price: '₹6.61 - 9.88 Lakh' },
-        { name: 'Toyota Glanza',   price: '₹6.73 - 10.03 Lakh' },
+        { name: 'Maruti Swift',    price: '₹ 6.49 - 9.64 Lakh', img: 'images/maruti-swift.png' },
+        { name: 'Hyundai i20',     price: '₹ 7.04 - 11.21 Lakh', img: 'images/hyundai-i20.png' },
+        { name: 'Tata Altroz',     price: '₹ 6.59 - 10.96 Lakh', img: 'images/tata-altroz.png' },
+        { name: 'Maruti Baleno',   price: '₹ 6.61 - 9.88 Lakh', img: 'images/maruti-baleno.png' },
+        { name: 'Toyota Glanza',   price: '₹ 6.73 - 10.03 Lakh', img: 'images/toyota-glanza.png' },
       ]
     },
     {
       label: 'Sedan',
       viewAllLabel: 'View All Sedan Cars',
       cars: [
-        { name: 'Maruti Dzire',    price: '₹6.79 - 9.94 Lakh' },
-        { name: 'Honda Amaze',     price: '₹8.00 - 10.40 Lakh' },
-        { name: 'Honda City',      price: '₹11.90 - 16.62 Lakh' },
-        { name: 'Hyundai Aura',    price: '₹6.49 - 9.05 Lakh' },
-        { name: 'VW Virtus',       price: '₹11.56 - 19.41 Lakh' },
+        { name: 'Honda City',      price: '₹ 11.90 - 16.62 Lakh', img: 'images/honda-city.png' },
+        { name: 'Hyundai Verna',   price: '₹ 11.00 - 17.42 Lakh', img: 'images/hyundai-verna.png' },
+        { name: 'Maruti Dzire',    price: '₹ 6.79 - 10.14 Lakh', img: 'images/maruti-dzire.png' },
+        { name: 'VW Virtus',       price: '₹ 11.56 - 19.41 Lakh', img: 'images/vw-virtus.png' },
+        { name: 'Skoda Slavia',    price: '₹ 10.69 - 18.69 Lakh', img: 'images/skoda-slavia.png' },
       ]
     },
     {
       label: 'MUV',
       viewAllLabel: 'View All MUV Cars',
       cars: [
-        { name: 'Maruti Ertiga',        price: '₹8.69 - 13.03 Lakh' },
-        { name: 'Kia Carens',           price: '₹10.69 - 19.99 Lakh' },
-        { name: 'Toyota Innova Crysta', price: '₹19.77 - 26.13 Lakh' },
-        { name: 'Mahindra Marazzo',     price: '₹14.78 - 17.59 Lakh' },
+        { name: 'Kia Carens',           price: '₹ 10.69 - 19.99 Lakh', img: 'images/kia-carens.png' },
+        { name: 'Toyota Innova Hycross', price: '₹ 19.77 - 30.98 Lakh', img: 'images/toyota-innova.png' },
+        { name: 'Maruti Ertiga',        price: '₹ 8.69 - 13.03 Lakh', img: 'images/maruti-ertiga.png' },
+        { name: 'Mahindra Marazzo',     price: '₹ 14.78 - 17.59 Lakh', img: 'images/mahindra-marazzo.png' },
       ]
     },
     {
       label: 'Luxury',
       viewAllLabel: 'View All Luxury Cars',
       cars: [
-        { name: 'Mercedes-Benz C-Class', price: '₹57.00 - 62.00 Lakh' },
-        { name: 'BMW 3 Series',          price: '₹46.90 - 60.50 Lakh' },
-        { name: 'Audi Q5',               price: '₹67.66 - 80.60 Lakh' },
-        { name: 'Volvo XC40',            price: '₹48.90 - 55.90 Lakh' },
+        { name: 'BMW 5 Series',          price: '₹ 72.90 - 80.50 Lakh', img: 'images/bmw-5series.png' },
+        { name: 'Mercedes-Benz GLC',     price: '₹ 75.90 - 85.00 Lakh', img: 'images/mercedes-glc.png' },
+        { name: 'Audi Q5',               price: '₹ 67.66 - 80.60 Lakh', img: 'images/audi-q5.png' },
+        { name: 'Volvo XC90',            price: '₹ 98.90 - 1.20 Crore', img: 'images/volvo-xc90.png' },
       ]
     }
   ];
@@ -157,10 +157,10 @@
 
   // ── Electric Cars Section ───────────────────────────────────────
   var electricCars = [
-    { name: 'Maruti Suzuki e Vitara', price: '₹15.99 - 20.01 Lakh' },
-    { name: 'Mahindra BE 6',          price: '₹18.90 - 28.49 Lakh' },
-    { name: 'Tata Punch EV',          price: '₹9.69 - 12.59 Lakh'  },
-    { name: 'Mahindra XEV 9e',        price: '₹21.90 - 31.25 Lakh' },
+    { name: 'Maruti Suzuki e Vitara', price: '₹15.99 - 20.01 Lakh', img: 'images/maruti-dzire.png' },
+    { name: 'Mahindra BE 6',          price: '₹18.90 - 28.49 Lakh', img: 'images/audi-q5.png' },
+    { name: 'Tata Punch EV',          price: '₹9.69 - 12.59 Lakh',  img: 'images/tata-punch.png' },
+    { name: 'Mahindra XEV 9e',        price: '₹21.90 - 31.25 Lakh', img: 'images/hyundai-creta.png' },
   ];
 
   var msContainer = document.querySelector('.ms-container');
@@ -184,7 +184,7 @@
       card.className = 'ms-card';
       card.innerHTML =
         '<div class="ms-card-img-wrap">' +
-          '<img class="ms-car-img" src="' + BLANK + '" alt="' + car.name + '">' +
+          '<img class="ms-car-img" src="' + (car.img || BLANK) + '" alt="' + car.name + '">' +
         '</div>' +
         '<div class="ms-card-body">' +
           '<div class="ms-car-name">' + car.name + '</div>' +
@@ -237,10 +237,10 @@
 
   // ── Upcoming Cars Section ────────────────────────────────────────
   var upcomingCars = [
-    { name: 'Lexus ES',                    price: '₹89.99 Lakh',   estimated: true,  expectedLaunch: 'Mar 31, 2026', type: 'New Variant', typeIcon: '&#x1F5D3;' },
-    { name: 'Volkswagen Taigun Facelift',  price: null,            estimated: false, expectedLaunch: 'Apr 9, 2026',  type: 'Facelift',    typeIcon: '&#x1F536;' },
-    { name: 'Mercedes-Benz CLA Electric',  price: '₹55 - 59 Lakh', estimated: true,  expectedLaunch: 'Apr 15, 2026', type: 'Electric',    typeIcon: '&#x26A1;' },
-    { name: 'Toyota Urban Cruiser EBELLA', price: '₹18 - 21 Lakh', estimated: true,  expectedLaunch: 'Apr 15, 2026', type: 'Electric',    typeIcon: '&#x26A1;' },
+    { name: 'Lexus ES 2026',               price: '₹ 89.99 Lakh',   estimated: true,  expectedLaunch: 'Mar 31, 2026', type: 'New Variant', typeIcon: '&#x1F5D3;', img: 'images/bmw-5series.png' },
+    { name: 'Volkswagen Taigun Facelift',  price: null,            estimated: false, expectedLaunch: 'Apr 9, 2026',  type: 'Facelift',    typeIcon: '&#x1F536;', img: 'images/vw-virtus.png' },
+    { name: 'Mercedes-Benz CLA Electric',  price: '₹ 55 - 59 Lakh', estimated: true,  expectedLaunch: 'Apr 15, 2026', type: 'Electric',    typeIcon: '&#x26A1;', img: 'images/mercedes-glc.png' },
+    { name: 'Toyota Urban Cruiser Taisor', price: '₹ 18 - 21 Lakh', estimated: true,  expectedLaunch: 'Apr 15, 2026', type: 'Electric',    typeIcon: '&#x26A1;', img: 'images/toyota-glanza.png' },
   ];
 
   if (msContainer) {
@@ -273,7 +273,7 @@
       card.innerHTML =
         '<div class="ms-card-img-wrap">' +
           '<span class="ms-launch-badge">EXPECTED LAUNCH : ' + car.expectedLaunch + '</span>' +
-          '<img class="ms-car-img" src="' + BLANK + '" alt="' + car.name + '">' +
+          '<img class="ms-car-img" src="' + (car.img || BLANK) + '" alt="' + car.name + '">' +
           '<span class="' + typeClass + '">' + car.typeIcon + ' ' + car.type + '</span>' +
         '</div>' +
         '<div class="ms-card-body">' +
@@ -328,10 +328,10 @@
 
   // ── Latest Cars Section ──────────────────────────────────────────
   var latestCars = [
-    { name: 'Skoda Kushaq',   price: '₹10.69 - 18.99 Lakh', launched: 'Mar 21, 2026', types: [] },
-    { name: 'Tata Harrier EV', price: '₹21.49 - 30.23 Lakh', launched: 'Mar 21, 2026', types: ['Electric', 'New Variant'] },
-    { name: 'Hyundai Exter',  price: '₹5.80 - 9.42 Lakh',   launched: 'Mar 20, 2026', types: ['Facelift'] },
-    { name: 'Lexus ES',       price: '₹89.99 Lakh',          launched: 'Mar 20, 2026', types: ['Electric', 'Facelift'] },
+    { name: 'Skoda Kushaq',   price: '₹10.69 - 18.99 Lakh', launched: 'Mar 21, 2026', types: [], img: 'images/skoda-slavia.png' },
+    { name: 'Tata Harrier EV', price: '₹21.49 - 30.23 Lakh', launched: 'Mar 21, 2026', types: ['Electric', 'New Variant'], img: 'images/tata-sierra.png' },
+    { name: 'Hyundai Exter',  price: '₹5.80 - 9.42 Lakh',   launched: 'Mar 20, 2026', types: ['Facelift'], img: 'images/hyundai-i20.png' },
+    { name: 'Lexus ES',       price: '₹89.99 Lakh',          launched: 'Mar 20, 2026', types: ['Electric', 'Facelift'], img: 'images/bmw-5series.png' },
   ];
 
   var typeIconMap = { 'Electric': '&#x26A1;', 'New Variant': '&#x1F5D3;', 'Facelift': '&#x1F536;' };
@@ -363,7 +363,7 @@
       card.innerHTML =
         '<div class="ms-card-img-wrap">' +
           '<span class="ms-launch-badge">LAUNCHED ON : ' + car.launched + '</span>' +
-          '<img class="ms-car-img" src="' + BLANK + '" alt="' + car.name + '">' +
+          '<img class="ms-car-img" src="' + (car.img || BLANK) + '" alt="' + car.name + '">' +
           (typeBadgesHtml ? '<div class="ms-type-badges-row">' + typeBadgesHtml + '</div>' : '') +
         '</div>' +
         '<div class="ms-card-body">' +
@@ -497,16 +497,16 @@
   // ── Compare Section ──────────────────────────────────────────────
   var comparisons = [
     {
-      car1: { brand: 'Nissan',        model: 'Gravite', price: '₹5.65 - 8.94 Lakh' },
-      car2: { brand: 'Renault',       model: 'Triber',  price: '₹5.76 - 8.60 Lakh' },
+      car1: { brand: 'Nissan',        model: 'Magnite', price: '₹ 5.65 - 8.94 Lakh', img: 'images/renault-duster.png' },
+      car2: { brand: 'Renault',       model: 'Kiger',  price: '₹ 5.76 - 11.23 Lakh', img: 'images/renault-duster-2.png' },
     },
     {
-      car1: { brand: 'Tata',          model: 'Punch',   price: '₹5.60 - 10.55 Lakh' },
-      car2: { brand: 'Tata',          model: 'Nexon',   price: '₹7.32 - 14.15 Lakh' },
+      car1: { brand: 'Tata',          model: 'Punch',   price: '₹ 5.60 - 10.55 Lakh', img: 'images/tata-punch.png' },
+      car2: { brand: 'Hyundai',        model: 'Exter',  price: '₹ 5.80 - 9.42 Lakh', img: 'images/hyundai-i20.png' },
     },
     {
-      car1: { brand: 'Maruti Suzuki', model: 'Baleno',  price: '₹5.99 - 9.10 Lakh' },
-      car2: { brand: 'Maruti Suzuki', model: 'FRONX',   price: '₹6.85 - 11.98 Lakh' },
+      car1: { brand: 'Maruti Suzuki', model: 'Baleno',  price: '₹ 5.99 - 9.10 Lakh', img: 'images/maruti-baleno.png' },
+      car2: { brand: 'Toyota',        model: 'Glanza',  price: '₹ 6.73 - 10.03 Lakh', img: 'images/toyota-glanza.png' },
     },
   ];
 
@@ -530,9 +530,9 @@
       card.className = 'ms-compare-card';
       card.innerHTML =
         '<div class="ms-compare-img-row">' +
-          '<img class="ms-compare-img" src="' + BLANK + '" alt="' + cmp.car1.model + '">' +
+          '<img class="ms-compare-img" src="' + (cmp.car1.img || BLANK) + '" alt="' + cmp.car1.model + '">' +
           '<span class="ms-vs-badge">VS</span>' +
-          '<img class="ms-compare-img ms-compare-img-right" src="' + BLANK + '" alt="' + cmp.car2.model + '">' +
+          '<img class="ms-compare-img ms-compare-img-right" src="' + (cmp.car2.img || BLANK) + '" alt="' + cmp.car2.model + '">' +
         '</div>' +
         '<div class="ms-compare-info-row">' +
           '<div class="ms-compare-car">' +
