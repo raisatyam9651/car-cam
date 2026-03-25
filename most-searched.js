@@ -418,12 +418,12 @@
 
   // ── Popular Brands Section ───────────────────────────────────────
   var popularBrands = [
-    { name: 'Maruti Suzuki' },
-    { name: 'Tata' },
-    { name: 'Kia' },
-    { name: 'Toyota' },
-    { name: 'Hyundai' },
-    { name: 'Mahindra' },
+    { name: 'Maruti Suzuki', img: 'images/logo-maruti.png' },
+    { name: 'Tata',          img: 'images/logo-tata.png' },
+    { name: 'Kia',           img: 'images/logo-kia.png' },
+    { name: 'Toyota',        img: 'images/logo-toyota.png' },
+    { name: 'Hyundai',       img: 'images/logo-hyundai.png' },
+    { name: 'Mahindra',      img: 'images/logo-mahindra.png' },
   ];
 
   if (msContainer) {
@@ -447,7 +447,7 @@
       card.className = 'ms-brand-card';
       card.innerHTML =
         '<div class="ms-brand-logo-wrap">' +
-          '<img class="ms-brand-logo" src="' + BLANK + '" alt="' + brand.name + ' logo">' +
+          '<img class="ms-brand-logo" src="' + (brand.img || BLANK) + '" alt="' + brand.name + ' logo">' +
         '</div>' +
         '<span class="ms-brand-name">' + brand.name + '</span>';
       brTrack.appendChild(card);
