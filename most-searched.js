@@ -597,25 +597,25 @@
       label: 'Hyundai Exter Facelift Variant-wise Colours',
       title: '2026 Hyundai Exter Colours Explained: Which Variants Get Wha...',
       desc:  'While colours like Golden Bronze and Titanium Black M are new, older Red...',
-      author: 'Cardekho', date: 'Mar 24, 2026'
+      author: 'Cardekho', date: 'Mar 24, 2026', img: 'images/hyundai-exter-news.png'
     },
     {
       label: 'New Renault Duster Authentic • Evolution Variant',
       title: 'New Renault Duster Authentic vs Evolution Variants Compared:...',
       desc:  'The Duster Authentic is a well-packaged base variant, the Evolution trim brings...',
-      author: 'Bikramjit', date: 'Mar 24, 2026'
+      author: 'Bikramjit', date: 'Mar 24, 2026', img: 'images/renault-duster-news.png'
     },
     {
       label: 'Compared Renault Duster • Grand Vitara',
       title: 'New Renault Duster Vs Maruti Grand Vitara Compared: Which SU...',
       desc:  'They may look tough, but both SUVs differ quite a lot.',
-      author: 'Vad', date: 'Mar 24, 2026'
+      author: 'Vad', date: 'Mar 24, 2026', img: 'images/grand-vitara-news.png'
     },
     {
       label: 'Hyundai Exter Facelift Variant-wise Powertrains',
       title: '2026 Hyundai Exter Variant-wise Engine And Gearbox Options E...',
       desc:  'The New Exter still gets the same engine and gearbox options as the pre-facelift...',
-      author: 'Rohit', date: 'Mar 23, 2026'
+      author: 'Rohit', date: 'Mar 23, 2026', img: 'images/hyundai-exter-news.png'
     },
   ];
 
@@ -639,7 +639,7 @@
       card.className = 'ms-news-card';
       card.innerHTML =
         '<div class="ms-news-img-wrap">' +
-          '<img class="ms-news-img" src="' + BLANK + '" alt="' + article.label + '">' +
+          '<img class="ms-news-img" src="' + (article.img || BLANK) + '" alt="' + article.label + '">' +
           '<span class="ms-news-label">' + article.label + '</span>' +
         '</div>' +
         '<div class="ms-news-body">' +
@@ -693,10 +693,10 @@
       label: 'Expert Reviews',
       viewAllLabel: 'View All Expert Reviews',
       articles: [
-        { title: 'Kia Carens Clavis 6000 km Review: A Big Change In Lifestyle',          desc: 'With the diesel gone, the turbo-petrol became the daily commuter, and that cam...', author: 'Ansh',     date: 'Mar 12, 2026' },
-        { title: 'Maruti Victoris 3000km Long Term Review: Shaadi Season Dutie...',       desc: 'Managing frustrations with Mumbai traffic while still handling wedding-related...',  author: 'Cardekho', date: 'Mar 08, 2026' },
-        { title: 'MG Windsor EV Long Term Review: One Month On A Full Charge?',           desc: 'The Windsor was the best-selling electric car in the country in 2025, why?',          author: 'Arun',     date: 'Feb 06, 2026' },
-        { title: 'Maruti Victoris Long Term Introduction: New Beginnings!',               desc: "Can Maruti's new compact SUV be victorious over our hearts?",                          author: 'Ujjawal',  date: 'Jan 22, 2026' },
+        { title: 'Kia Carens Clavis 6000 km Review: A Big Change In Lifestyle',          desc: 'With the diesel gone, the turbo-petrol became the daily commuter, and that cam...', author: 'Ansh',     date: 'Mar 12, 2026', img: 'images/kia-carens.png' },
+        { title: 'Maruti Dzire 3000km Long Term Review: Shaadi Season Dutie...',       desc: 'Managing frustrations with Mumbai traffic while still handling wedding-related...',  author: 'Cardekho', date: 'Mar 08, 2026', img: 'images/maruti-dzire.png' },
+        { title: 'Tata Nexon EV Long Term Review: One Month On A Full Charge?',           desc: 'The Nexon was the best-selling electric car in the country in 2025, why?',          author: 'Arun',     date: 'Feb 06, 2026', img: 'images/tata-nexon.png' },
+        { title: 'Renault Duster Long Term Introduction: New Beginnings!',               desc: "Can Renault's new compact SUV be victorious over our hearts?",                          author: 'Ujjawal',  date: 'Jan 22, 2026', img: 'images/renault-duster.png' },
       ]
     },
     { label: 'Videos',           viewAllLabel: 'View All Videos',           articles: [] },
@@ -757,7 +757,7 @@
         card.className = 'ms-know-card';
         card.innerHTML =
           '<div class="ms-know-img-wrap">' +
-            '<img class="ms-know-img" src="' + BLANK + '" alt="' + article.title + '">' +
+            '<img class="ms-know-img" src="' + (article.img || BLANK) + '" alt="' + article.title + '">' +
           '</div>' +
           '<div class="ms-know-body">' +
             '<div class="ms-know-title">' + article.title + '</div>' +
