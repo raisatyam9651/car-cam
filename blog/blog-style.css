@@ -1,0 +1,258 @@
+/* ── AutoVerse Design Tokens ── */
+:root {
+  --blue:        #00b4ff;
+  --blue-dark:   #0066ff;
+  --blue-glow:   rgba(0, 180, 255, 0.3);
+  --orange:      #ff6a00;
+  --orange-mid:  #ffb347;
+  --orange-glow: rgba(255, 106, 0, 0.3);
+
+  --bg-base:     #080b10;
+  --bg-card:     #0d121a;
+  --bg-surface:  #111823;
+  --bg-border:   rgba(255,255,255,0.06);
+
+  --text-primary: #f0f4ff;
+  --text-secondary: #7a8aaa;
+  --bg-body:     #f4f6f9;
+  --bg-white:    #ffffff;
+  --bg-grey-row: #f9fafc;
+  --bg-border:   #e5e8ed;
+
+  --text-main:    #24272c;
+  --text-grey:    #5f6368;
+  --text-muted:   #9aa0a6;
+
+  --font-body:    'Outfit', sans-serif;
+  --font-display: 'Rajdhani', sans-serif;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --header-height: 72px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Consistent AutoVerse Header ── */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--header-height);
+  background: rgba(8, 11, 16, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(1rem, 5%, 5rem);
+  z-index: 2000;
+}
+.nav-logo { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+.logo-text { font-family: var(--font-display); font-size: clamp(1.2rem, 4vw, 1.5rem); font-weight: 700; color: #fff; letter-spacing: 1px; }
+.logo-accent { color: var(--blue); }
+.nav-links { display: flex; list-style: none; gap: clamp(0.8rem, 2vw, 1.5rem); }
+.nav-link { color: #fff; text-decoration: none; font-size: 0.9rem; font-weight: 500; opacity: 0.8; transition: opacity 0.3s; }
+.nav-link:hover { opacity: 1; }
+
+@media (max-width: 600px) {
+  .nav-links { display: none; } /* Hide secondary links on mobile to save space */
+}
+
+/* ── Secondary Portal Tabs ── */
+.portal-tabs {
+  position: sticky;
+  top: var(--header-height);
+  background: var(--bg-white);
+  border-bottom: 1px solid var(--bg-border);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.tabs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tab-link {
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  color: var(--text-grey);
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s;
+}
+.tab-link:hover, .tab-link.active {
+  color: var(--orange);
+  border-bottom-color: var(--orange);
+}
+
+/* ── Layout ── */
+.main-wrapper {
+  max-width: 1200px;
+  margin: 1.5rem auto;
+  padding: 85px 20px 40px; /* Space for nav + tabs */
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .main-wrapper { grid-template-columns: 1fr; }
+  .sidebar { display: none; }
+}
+
+/* ── Content Sections (Cards) ── */
+section {
+  background: var(--bg-white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--bg-border);
+}
+
+.car-title { font-size: clamp(1.5rem, 5vw, 2.2rem); font-weight: 700; margin-bottom: 0.5rem; }
+.rating-pill { 
+  display: inline-flex; 
+  align-items: center; 
+  gap: 5px; 
+  background: #27ae60; 
+  color: #fff; 
+  padding: 2px 8px; 
+  border-radius: 4px; 
+  font-size: 0.85rem; 
+  font-weight: 700;
+}
+
+.hero-price-line { font-size: clamp(1.2rem, 4vw, 1.8rem); font-weight: 800; margin: 1rem 0; }
+.hero-price-line span { font-size: 0.9rem; color: var(--text-muted); font-weight: 400; display: block; }
+
+.main-img { width: 100%; border-radius: 8px; margin: 1rem 0; object-fit: contain; }
+.thumb-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+@media (min-width: 600px) { .thumb-grid { grid-template-columns: repeat(4, 1fr); } }
+
+/* ── High Authority Specs Grid ── */
+.spec-summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+@media (min-width: 768px) { .spec-summary { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); } }
+
+.spec-item-v2 {
+  border: 1px solid var(--bg-border);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: left;
+}
+.spec-item-v2 span { display: block; }
+.v2-label { font-size: 0.7rem; color: var(--text-grey); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+.v2-val { font-weight: 700; font-size: 0.9rem; }
+
+/* ── Mobile Sticky Bottom Bar ── */
+.mobile-sticky-bar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: var(--bg-white);
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 -4px 15px rgba(0,0,0,0.1);
+  z-index: 1500;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-sticky-bar { display: flex; }
+  body { padding-bottom: 80px; } /* Space for bar */
+}
+
+.sticky-bar-price { font-weight: 800; font-size: 1.1rem; }
+.sticky-bar-cta { background: var(--orange); color: #fff; border: none; padding: 0.6rem 1.2rem; border-radius: 6px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; }
+
+/* ── Sticky Sidebar Lead Forms ── */
+.sidebar-sticky { position: sticky; top: 145px; }
+.lead-card {
+  background: var(--bg-white);
+  border: 1px solid var(--bg-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.btn-cta {
+  background: var(--orange);
+  color: #fff;
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+/* ── Comparison Improved ── */
+.comp-scroll-container {
+  overflow-x: auto;
+  margin-top: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--orange) transparent;
+}
+.comp-table-v3 {
+  width: auto;
+  min-width: 1000px;
+  border-collapse: collapse;
+}
+.comp-table-v3 td, .comp-table-v3 th {
+  padding: 1rem 0.8rem;
+  text-align: center;
+  border-bottom: 1px solid var(--bg-border);
+  vertical-align: top;
+}
+.comp-table-v3 th { text-align: left; background: var(--bg-grey-row); }
+
+.car-header {
+  width: 180px;
+  text-align: center;
+  padding: 0 0.5rem;
+}
+.car-header img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+  background: #f1f3f6;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+}
+.car-name-comp { font-weight: 700; font-size: 0.9rem; display: block; margin-bottom: 4px; height: 40px; }
+.car-price-comp { color: var(--text-grey); font-size: 0.75rem; font-weight: 700; }
+
+.spec-category-row {
+  background: var(--bg-grey-row);
+  color: var(--text-main);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-align: left !important;
+  padding: 0.8rem 1rem !important;
+}
+
+.comp-rating { color: #f1c40f; font-weight: 700; font-size: 0.85rem; }
+.comp-vs-link { color: var(--blue-dark); text-decoration: none; font-size: 0.75rem; font-weight: 700; display: block; margin-top: 5px; }
+
+footer { background: #fff; padding: 3rem; text-align: center; border-top: 1px solid var(--bg-border); margin-top: 4rem; }

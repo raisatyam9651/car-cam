@@ -9,12 +9,12 @@
       label: 'SUV',
       viewAllLabel: 'View All SUV Cars',
       cars: [
-        { name: 'Renault Duster',  price: '₹10.49 - 18.69 Lakh', launched: 'Mar 17, 2026' },
-        { name: 'Tata Punch',      price: '₹5.60 - 10.55 Lakh' },
-        { name: 'Tata Sierra',     price: '₹11.49 - 21.29 Lakh' },
-        { name: 'Tata Nexon',      price: '₹7.32 - 14.15 Lakh' },
-        { name: 'Hyundai Creta',   price: '₹11.11 - 20.15 Lakh' },
-        { name: 'Maruti Brezza',   price: '₹8.34 - 14.14 Lakh' },
+        { name: 'Renault Duster',  price: '₹10.49 - 18.69 Lakh', launched: 'Mar 17, 2026', img: 'images/renault-duster.png', blogUrl: 'blog/renault-duster.html' },
+        { name: 'Tata Punch',      price: '₹5.60 - 10.55 Lakh', img: 'images/tata-punch.png', blogUrl: 'blog/tata-punch.html' },
+        { name: 'Tata Sierra',     price: '₹11.49 - 21.29 Lakh', img: 'images/tata-sierra.png', blogUrl: 'blog/tata-sierra.html' },
+        { name: 'Tata Nexon',      price: '₹7.32 - 14.15 Lakh', img: 'images/tata-nexon.png', blogUrl: 'blog/tata-nexon.html' },
+        { name: 'Hyundai Creta',   price: '₹11.11 - 20.15 Lakh', img: 'images/hyundai-creta.png', blogUrl: 'blog/hyundai-creta.html' },
+        { name: 'Maruti Brezza',   price: '₹8.34 - 14.14 Lakh', img: 'images/maruti-brezza.png', blogUrl: 'blog/maruti-brezza.html' },
       ]
     },
     {
@@ -94,13 +94,17 @@
       card.innerHTML =
         '<div class="ms-card-img-wrap">' +
           badge +
-          '<img class="ms-car-img" src="' + BLANK + '" alt="' + car.name + '">' +
+          '<img class="ms-car-img" src="' + (car.img || BLANK) + '" alt="' + car.name + '">' +
         '</div>' +
         '<div class="ms-card-body">' +
           '<div class="ms-car-name">' + car.name + '</div>' +
           '<div class="ms-car-price">' + car.price + '<sup>*</sup></div>' +
-          '<a href="#" class="ms-offers-btn">View ' + MONTH + ' Offers</a>' +
+          '<a href="' + (car.blogUrl || '#') + '" class="ms-offers-btn">View details</a>' +
         '</div>';
+
+      card.addEventListener('click', function() {
+        if(car.blogUrl) window.location.href = car.blogUrl;
+      });
 
       track.appendChild(card);
     });
@@ -185,7 +189,7 @@
         '<div class="ms-card-body">' +
           '<div class="ms-car-name">' + car.name + '</div>' +
           '<div class="ms-car-price">' + car.price + '<sup>*</sup></div>' +
-          '<a href="#" class="ms-offers-btn">View ' + MONTH + ' Offers</a>' +
+          '<a href="#" class="ms-offers-btn">View details</a>' +
         '</div>';
       evTrack.appendChild(card);
     });
@@ -365,7 +369,7 @@
         '<div class="ms-card-body">' +
           '<div class="ms-car-name">' + car.name + '</div>' +
           '<div class="ms-car-price">' + car.price + '<sup>*</sup></div>' +
-          '<a href="#" class="ms-offers-btn">View ' + MONTH + ' Offers</a>' +
+          '<a href="#" class="ms-offers-btn">View details</a>' +
         '</div>';
 
       ltTrack.appendChild(card);
@@ -542,7 +546,7 @@
             '<span class="ms-compare-price">' + cmp.car2.price + ' <sup>*</sup></span>' +
           '</div>' +
         '</div>' +
-        '<a href="#" class="ms-offers-btn">' + cmp.car1.model + ' vs ' + cmp.car2.model + '</a>';
+        '<a href="#" class="ms-offers-btn">Compare Details</a>';
       cmpTrack.appendChild(card);
     });
 
